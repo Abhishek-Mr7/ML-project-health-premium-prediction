@@ -2,8 +2,11 @@ import streamlit as st
 import pandas as pd
 import pickle
 
+# Correct path to the model file
+model_path = r"C:\Users\Abhishek MR\OneDrive\Desktop\Machine learning\health_premium_prediction (2).pkl"
+
 # Load the model
-with open("health_premium_prediction.pkl", "rb") as file:
+with open(model_path, "rb") as file:
     model = pickle.load(file)
 
 # Function to calculate normalized risk
@@ -129,4 +132,5 @@ input_dict = {
 # Prediction button
 if st.button('Predict'):
     prediction = predict(input_dict)
-    st.success(f'Predicted Health Insurance Cost: ₹{prediction}')
+    # Format the prediction as a currency value with two decimal places
+    st.success(f'Predicted Health Insurance Cost: ₹{prediction:,.2f}')

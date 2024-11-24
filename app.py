@@ -7,7 +7,8 @@ from sklearn.preprocessing import LabelEncoder  # Make sure to include any depen
 st.title("Health Insurance Cost Prediction App")
 
 # File uploader for model file (User uploads .pkl file)
-uploaded_model = st.file_uploader("C:\Users\Abhishek MR\OneDrive\Desktop\Machine learning\health_premium_prediction (2).pkl", type=["pkl"])
+uploaded_model = st.file_uploader("C:\\Users\\Abhishek MR\\OneDrive\\Desktop\\Machine learning\\health_premium_prediction (2).pkl"
+, type=["pkl"])
 
 # Check if a file is uploaded
 if uploaded_model is not None:

@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-from sklearn.preprocessing import LabelEncoder  # Make sure to include any dependencies if necessary
+
 
 # Title of the app
 st.title("Health Insurance Cost Prediction App")
